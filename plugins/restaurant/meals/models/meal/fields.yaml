@@ -1,0 +1,91 @@
+fields:
+    name:
+        label: 'Meal name'
+        oc.commentPosition: ''
+        span: full
+        disabled: 0
+        required: 1
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        oc.commentPosition: ''
+        preset:
+            field: name
+            type: slug
+        type: text
+    is_available:
+        label: 'Show on site'
+        span: auto
+        type: switch
+    start_date:
+        label: 'Start Date'
+        oc.commentPosition: ''
+        mode: date
+        span: left
+        type: datepicker
+    end_date:
+        label: 'End Date'
+        oc.commentPosition: ''
+        mode: date
+        span: auto
+        type: datepicker
+    description:
+        label: Description
+        span: full
+        size: ''
+        oc.commentPosition: ''
+        type: richeditor
+    main_picture:
+        label: 'The main picture'
+        oc.commentPosition: ''
+        mode: image
+        imageWidth: '80'
+        imageHeight: '80'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    meal_galary:
+        label: Galary
+        oc.commentPosition: ''
+        mode: image
+        imageWidth: '80'
+        imageHeight: '80'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    genres:
+        label: Genres
+        oc.commentPosition: ''
+        nameFrom: genre_title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    ingredients:
+        label: Ingredients
+        oc.commentPosition: ''
+        prompt: 'Add new item'
+        span: auto
+        type: repeater
+        form:
+            fields:
+                ingredient_name:
+                    label: 'Ingredient name'
+                    oc.commentPosition: ''
+                    span: auto
+                    type: text
+                quantity:
+                    label: Quantity
+                    span: auto
+                    oc.commentPosition: ''
+                    type: text
+    price:
+        label: Price
+        span: auto
+        type: number

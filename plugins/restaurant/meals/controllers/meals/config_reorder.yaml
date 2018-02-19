@@ -1,0 +1,4 @@
+title: Meals
+modelClass: Restaurant\Meals\Models\Meal
+toolbar:
+    buttons: reorder_toolbar

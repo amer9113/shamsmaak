@@ -1,0 +1,63 @@
+title = "meal details"
+url = "/meals/meal/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Restaurant\Meals\Models\Meal"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+<h2>{{ record.name }}</h2>
+
+{% if record.main_picture.path is not empty %}
+    <div>Main Image</div>
+    <img src="{{ record.main_picture.path}}"style=" width: 200px;">
+{% endif %}
+
+{% if record.meal_galary is not empty %}
+    <div>Gallery</div>
+    <ul class="gallery clearfix">
+        {% for image in record.meal_galary %}
+        <li>
+
+            <img src="{{ image.thumb(80,80,{'mode':'crop'}) }}">
+
+        </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% if record.price is not empty %}
+<h3>price</h3>
+    <div>€{{record.price}}</div>
+{% endif %}
+
+{% if record.genres is not empty %}
+<h3>Genres</h3>
+{% for genre in  record.genres  %}
+    <a href="/genres/{{genre.slug}}">{{genre.genre_title}}</a>
+{% endfor %}
+{% endif %}
+
+{% if record.description is not empty %}
+    <h3>Description</h3>
+    <h4>{{ record.description|raw }}</h4>
+{% endif %}
+
+{% if record.ingredients is not empty %}
+    <h3>Ingredients</h3>
+        {% for ingredient in  record.ingredients  %}
+            <h4>{{ingredient.ingredient_name}}</h4>
+        {% endfor %}
+{% endif %}
+{% else %}
+{{ notFoundMessage }}
+{% endif %}

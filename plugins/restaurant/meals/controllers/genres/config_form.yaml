@@ -1,0 +1,10 @@
+name: Genres
+form: $/restaurant/meals/models/genre/fields.yaml
+modelClass: Restaurant\Meals\Models\Genre
+defaultRedirect: restaurant/meals/genres
+create:
+    redirect: 'restaurant/meals/genres/update/:id'
+    redirectClose: restaurant/meals/genres
+update:
+    redirect: restaurant/meals/genres
+    redirectClose: restaurant/meals/genres
