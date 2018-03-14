@@ -1,0 +1,10 @@
+name: Parties
+form: $/restaurant/parties/models/party/fields.yaml
+modelClass: Restaurant\Parties\Models\Party
+defaultRedirect: restaurant/parties/parties
+create:
+    redirect: 'restaurant/parties/parties/update/:id'
+    redirectClose: restaurant/parties/parties
+update:
+    redirect: restaurant/parties/parties
+    redirectClose: restaurant/parties/parties

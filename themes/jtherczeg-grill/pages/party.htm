@@ -1,0 +1,41 @@
+title = "Party"
+url = "/parties/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Restaurant\Parties\Models\Party"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    <h2>{{ record.name }}</h2>
+
+    <h3>{{ record.date }}</h3>
+    <hr>
+    <h1>Description</h1>
+    <h4>{{ record.description|raw }}</h4>
+
+    {% if record.party_galary is not empty %}
+    <div>Gallery</div>
+
+    <ul class="gallery clearfix">
+        {% for image in record.party_galary %}
+        <li>
+
+            <img src="{{ image.thumb(80,80,{'mode':'crop'}) }}">
+
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

@@ -1,14 +1,16 @@
-1519056458a:1:{s:7:"nav.htm";a:5:{s:8:"fileName";s:7:"nav.htm";s:7:"content";s:2111:"{# Note: Only one levels of sublinks are supported by Bootstrap 3 #}
+1520990661a:1:{s:7:"nav.htm";a:5:{s:8:"fileName";s:7:"nav.htm";s:7:"content";s:1904:"{# Note: Only one levels of sublinks are supported by Bootstrap 3 #}
 {% set
     links = {
-	    'home':      ['home', 'Home'],
-        'Meals':     ['samples/Meals', 'Meals'],
-		'about':     ['samples/about-us', 'About Us'],
-		'products':  ['samples/products', 'Products'],
-        'contact':   ['samples/contact-us', 'Contact'],
+	    'Home':      ['home', 'Home'],
+        'Meals':     ['samples/Meals', 'Maaltijden'],
+        'Order':     ['samples/order', 'Bestelling'],
+
+        'Contact':   ['samples/contact-us', 'Contact'],
+        'Parties':   ['samples/parties', 'Partijen'],
     }
 %}
-
+{# 'About':     ['samples/about-us', 'About Us'],#}
+{# 'products':  ['samples/products', 'Products'],#}
 {% macro render_menu(links) %}
     {% for code, link in links %}
         <li class="{{ code == currentPage ? 'active' }} {{ link.sublinks ? 'dropdown' }}">
@@ -34,40 +36,36 @@
 
 <div id="main-header">
     <div class="container">
+
         <div class="row">
-            <div class="col-md-3">
-                <div class="logo">
-                    <a href="{{ 'home'|page }}"><img src="{{ 'assets/images/logo.png'|theme }}" title="" alt="" ></a>
-                </div>
-            </div>
-            <div class="col-md-6">
+            <div>
+
                 <div class="main-menu">
+                    <div class="hide Mobile">
+                        <a href="#" id="menu-icon">Menu</a>
+                    </div>
                     <ul>
+                        <li id="logoLine"><a href="{{ 'home'|page }}"><img src="{{ 'assets/images/logoLine.png'|theme }}" title="" alt="" ></a></li>
                         {{ nav.render_menu(links) }}
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="search-box">  
-                    <form role="form" name="search_form" method="get" class="search_form">
-                        <input id="search" type="text" />
-                        <input type="submit" id="search-button" />
-                    </form>
-                </div>
-            </div>
+
         </div>
     </div>
-</div>";s:5:"mtime";i:1519034889;s:6:"markup";s:2111:"{# Note: Only one levels of sublinks are supported by Bootstrap 3 #}
+</div>";s:5:"mtime";i:1520975905;s:6:"markup";s:1904:"{# Note: Only one levels of sublinks are supported by Bootstrap 3 #}
 {% set
     links = {
-	    'home':      ['home', 'Home'],
-        'Meals':     ['samples/Meals', 'Meals'],
-		'about':     ['samples/about-us', 'About Us'],
-		'products':  ['samples/products', 'Products'],
-        'contact':   ['samples/contact-us', 'Contact'],
+	    'Home':      ['home', 'Home'],
+        'Meals':     ['samples/Meals', 'Maaltijden'],
+        'Order':     ['samples/order', 'Bestelling'],
+
+        'Contact':   ['samples/contact-us', 'Contact'],
+        'Parties':   ['samples/parties', 'Partijen'],
     }
 %}
-
+{# 'About':     ['samples/about-us', 'About Us'],#}
+{# 'products':  ['samples/products', 'Products'],#}
 {% macro render_menu(links) %}
     {% for code, link in links %}
         <li class="{{ code == currentPage ? 'active' }} {{ link.sublinks ? 'dropdown' }}">
@@ -93,27 +91,21 @@
 
 <div id="main-header">
     <div class="container">
+
         <div class="row">
-            <div class="col-md-3">
-                <div class="logo">
-                    <a href="{{ 'home'|page }}"><img src="{{ 'assets/images/logo.png'|theme }}" title="" alt="" ></a>
-                </div>
-            </div>
-            <div class="col-md-6">
+            <div>
+
                 <div class="main-menu">
+                    <div class="hide Mobile">
+                        <a href="#" id="menu-icon">Menu</a>
+                    </div>
                     <ul>
+                        <li id="logoLine"><a href="{{ 'home'|page }}"><img src="{{ 'assets/images/logoLine.png'|theme }}" title="" alt="" ></a></li>
                         {{ nav.render_menu(links) }}
                     </ul>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="search-box">  
-                    <form role="form" name="search_form" method="get" class="search_form">
-                        <input id="search" type="text" />
-                        <input type="submit" id="search-button" />
-                    </form>
-                </div>
-            </div>
+
         </div>
     </div>
 </div>";s:4:"code";N;}}

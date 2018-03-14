@@ -1,0 +1,11 @@
+plugin:
+    name: 'restaurant.parties::lang.plugin.name'
+    description: 'restaurant.parties::lang.plugin.description'
+    author: Restaurant
+    icon: oc-icon-birthday-cake
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Parties
+        url: restaurant/parties/parties
+        icon: icon-birthday-cake

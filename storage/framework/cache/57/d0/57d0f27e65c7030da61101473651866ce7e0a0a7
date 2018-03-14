@@ -1,0 +1,390 @@
+1520991074a:1:{s:20:"samples/order_ar.htm";a:12:{s:8:"fileName";s:20:"samples/order_ar.htm";s:7:"content";s:9365:"title = "الطلبات"
+url = "/order_ar"
+layout = "order_ar"
+is_hidden = 0
+
+[meals]
+results = 0
+sortOrder = "name desc"
+
+[session]
+security = "user"
+redirect = "login"
+
+[orderform]
+==
+{%  set meals = meals.meals %}
+{% set counter = 0 %}
+{% set LeftDiv='' %}
+{% set RightDiv='' %}
+<style>
+
+
+</style>
+
+<!--<div id="heading">-->
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div class="col-md-12">-->
+<!--<div class="heading-content">-->
+<!--<h2>BESTELEN</h2>-->
+<!--<span>Home / <a href="{{ 'samples/order'|page }}">BESTELEN</a></span>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+{% flash success %}
+<h1>{{message}}</h1>
+{% endflash %}
+<div id="orderMenu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="order">
+                    <div class="title" id="TopOrder">الطلبات</div>
+                    <div class="title" id="secondTitle">
+                        الوجبات الأسعار العدد
+                    </div>
+                    <div id="elements">
+                        <div class="left elements">
+                            {% for meal in meals %}
+                            {% set counter = counter+1 %}
+                            {% if (counter % 2) > 0 %}
+                            <div class="rowElements">
+                                <div class="name">
+                                    <input type="hidden" id="mealName{{ meal.id }}" name="mealName{{ meal.id }}"
+                                           value="{{ meal.name }}" required>
+                                    <input type="hidden" id="mealNameArabic{{ meal.id }}"
+                                           name="mealNameArabic{{ meal.id }}" value="{{ meal.name_ar }}" required> {{
+                                    meal.name_ar }}
+                                </div>
+                                <div class="priceAndUnit">
+                                    <div class="price">
+                                        <input type="hidden" id="mealPrice{{ meal.id }}" name="mealPrice"
+                                               value="{{ meal.price }}" required>€{{meal.price}}
+                                    </div>
+                                    <div class="unit">
+                                        <div class="count-input space-bottom">
+                                            <a class="incr-btn" data-action="decrease" href="#"
+                                               onClick="addToOrder({{ meal.id }},-1);">–</a>
+                                            <input class="quantity" id="quantity{{ meal.id }}" type="hidden"
+                                                   name="quantity"
+                                                   value="0" max="50"/>
+                                            <div id="quantityText{{ meal.id }}">0</div>
+                                            <a class="incr-btn" data-action="increase" href="#"
+                                               onClick="addToOrder({{ meal.id }},1);">&plus;</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div  id="tr{{ meal.id }}" style="display: none;">
+                                <input class="tr orderInput" placeholder="هل لديك طلبات خاصة"  type="text"  id="mealDescription{{ meal.id }}" name="mealDescription{{ meal.id }}"
+                                       style="direction:RTL;margin-top: 0px;margin-bottom:4px"></td>
+                            </div>
+                            {% endif%}
+                            {% endfor %}
+                            {{LeftDiv}}
+                        </div>
+
+                        <div class="right elements">
+                            {% set counter =0%}
+                            {% for meal in meals %}
+                            {% set counter = counter+1 %}
+                            {% if (counter % 2) ==0 %}
+                            <div class="rowElements">
+                                <div class="name">
+                                    <input type="hidden" id="mealName{{ meal.id }}" name="mealName{{ meal.id }}"
+                                           value="{{ meal.name }}" required>
+                                    <input type="hidden" id="mealNameArabic{{ meal.id }}"
+                                           name="mealNameArabic{{ meal.id }}" value="{{ meal.name_ar }}" required> {{
+                                    meal.name_ar }}
+                                </div>
+                                <div class="priceAndUnit">
+                                    <div class="price">
+                                        <input type="hidden" id="mealPrice{{ meal.id }}" name="mealPrice"
+                                               value="{{ meal.price }}" required>€{{meal.price}}
+                                    </div>
+                                    <div class="unit">
+                                        <div class="count-input space-bottom">
+                                            <a class="incr-btn" data-action="decrease" href="#"
+                                               onClick="addToOrder({{ meal.id }},-1);">–</a>
+                                            <input class="quantity" id="quantity{{ meal.id }}" type="hidden"
+                                                   name="quantity"
+                                                   value="0" max="50"/>
+                                            <div id="quantityText{{ meal.id }}">0</div>
+                                            <a class="incr-btn" data-action="increase" href="#"
+                                               onClick="addToOrder({{ meal.id }},1);">&plus;</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div  id="tr{{ meal.id }}" style="display: none;">
+                                <input class="tr orderInput" placeholder="هل لديك طلبات خاصة"  type="text"  id="mealDescription{{ meal.id }}" name="mealDescription{{ meal.id }}"
+                                       style=" direction:RTL;margin-top: 0px;margin-bottom:4px;"></td>
+                            </div>
+                            {% endif%}
+                            {% endfor %}
+                            {{LeftDiv}}
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div>
+                    <a id="buttonDone" href="#" class="button" onClick="movePage(1,'ar');"
+                       style="display: none; float: left;">اطلب</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div id="invoice" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="order">
+                    <div class="title" id="TopOrder">
+                        الفاتورة
+                    </div>
+                    <div class="title" id="secondTitle">
+                        الوجبات الأسعار العدد
+                    </div>
+                    <table id="invoiceTable" class="invoiceTable">
+                        <thead>
+                        <tr>
+                            <td>الوجبات</td>
+                            <td>سعر القطعة</td>
+                            <td>العدد</td>
+                            <td>السعر </td>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div>
+                        <label style="margin-top:30px; float: right; "> طلبات خاصة</label>
+                        <textarea id="description" class="orderInput" placeholder="هل لديك طلبات خاصة"  name="description" style="direction:RTL; max-width: none;"></textarea>
+                    </div>
+                    <div>
+                        <div id="Total" style="margin-top:30px; float: right ">
+                            <div id="TotalTitle">المجموع: €</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+                    <form data-request="orderform::onSave">
+
+                        <input type="hidden" value="{{user.email }}" name="email">
+                        <textarea id="ordersDescription"  name="ordersDescription" style="display:none;"></textarea>
+                        <input type="hidden" value="ar" name="lang">
+                        <button type="submit" class="button" style="float: left; border:none;">أرسال</button>
+
+                    </form>
+                    <a href="#" class="button" onClick="movePage(2,'ar');" style="float: right;">تراجع</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>";s:5:"mtime";i:1520990343;s:6:"markup";s:9164:"{%  set meals = meals.meals %}
+{% set counter = 0 %}
+{% set LeftDiv='' %}
+{% set RightDiv='' %}
+<style>
+
+
+</style>
+
+<!--<div id="heading">-->
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div class="col-md-12">-->
+<!--<div class="heading-content">-->
+<!--<h2>BESTELEN</h2>-->
+<!--<span>Home / <a href="{{ 'samples/order'|page }}">BESTELEN</a></span>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+{% flash success %}
+<h1>{{message}}</h1>
+{% endflash %}
+<div id="orderMenu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="order">
+                    <div class="title" id="TopOrder">الطلبات</div>
+                    <div class="title" id="secondTitle">
+                        الوجبات الأسعار العدد
+                    </div>
+                    <div id="elements">
+                        <div class="left elements">
+                            {% for meal in meals %}
+                            {% set counter = counter+1 %}
+                            {% if (counter % 2) > 0 %}
+                            <div class="rowElements">
+                                <div class="name">
+                                    <input type="hidden" id="mealName{{ meal.id }}" name="mealName{{ meal.id }}"
+                                           value="{{ meal.name }}" required>
+                                    <input type="hidden" id="mealNameArabic{{ meal.id }}"
+                                           name="mealNameArabic{{ meal.id }}" value="{{ meal.name_ar }}" required> {{
+                                    meal.name_ar }}
+                                </div>
+                                <div class="priceAndUnit">
+                                    <div class="price">
+                                        <input type="hidden" id="mealPrice{{ meal.id }}" name="mealPrice"
+                                               value="{{ meal.price }}" required>€{{meal.price}}
+                                    </div>
+                                    <div class="unit">
+                                        <div class="count-input space-bottom">
+                                            <a class="incr-btn" data-action="decrease" href="#"
+                                               onClick="addToOrder({{ meal.id }},-1);">–</a>
+                                            <input class="quantity" id="quantity{{ meal.id }}" type="hidden"
+                                                   name="quantity"
+                                                   value="0" max="50"/>
+                                            <div id="quantityText{{ meal.id }}">0</div>
+                                            <a class="incr-btn" data-action="increase" href="#"
+                                               onClick="addToOrder({{ meal.id }},1);">&plus;</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div  id="tr{{ meal.id }}" style="display: none;">
+                                <input class="tr orderInput" placeholder="هل لديك طلبات خاصة"  type="text"  id="mealDescription{{ meal.id }}" name="mealDescription{{ meal.id }}"
+                                       style="direction:RTL;margin-top: 0px;margin-bottom:4px"></td>
+                            </div>
+                            {% endif%}
+                            {% endfor %}
+                            {{LeftDiv}}
+                        </div>
+
+                        <div class="right elements">
+                            {% set counter =0%}
+                            {% for meal in meals %}
+                            {% set counter = counter+1 %}
+                            {% if (counter % 2) ==0 %}
+                            <div class="rowElements">
+                                <div class="name">
+                                    <input type="hidden" id="mealName{{ meal.id }}" name="mealName{{ meal.id }}"
+                                           value="{{ meal.name }}" required>
+                                    <input type="hidden" id="mealNameArabic{{ meal.id }}"
+                                           name="mealNameArabic{{ meal.id }}" value="{{ meal.name_ar }}" required> {{
+                                    meal.name_ar }}
+                                </div>
+                                <div class="priceAndUnit">
+                                    <div class="price">
+                                        <input type="hidden" id="mealPrice{{ meal.id }}" name="mealPrice"
+                                               value="{{ meal.price }}" required>€{{meal.price}}
+                                    </div>
+                                    <div class="unit">
+                                        <div class="count-input space-bottom">
+                                            <a class="incr-btn" data-action="decrease" href="#"
+                                               onClick="addToOrder({{ meal.id }},-1);">–</a>
+                                            <input class="quantity" id="quantity{{ meal.id }}" type="hidden"
+                                                   name="quantity"
+                                                   value="0" max="50"/>
+                                            <div id="quantityText{{ meal.id }}">0</div>
+                                            <a class="incr-btn" data-action="increase" href="#"
+                                               onClick="addToOrder({{ meal.id }},1);">&plus;</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div  id="tr{{ meal.id }}" style="display: none;">
+                                <input class="tr orderInput" placeholder="هل لديك طلبات خاصة"  type="text"  id="mealDescription{{ meal.id }}" name="mealDescription{{ meal.id }}"
+                                       style=" direction:RTL;margin-top: 0px;margin-bottom:4px;"></td>
+                            </div>
+                            {% endif%}
+                            {% endfor %}
+                            {{LeftDiv}}
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div>
+                    <a id="buttonDone" href="#" class="button" onClick="movePage(1,'ar');"
+                       style="display: none; float: left;">اطلب</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div id="invoice" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="order">
+                    <div class="title" id="TopOrder">
+                        الفاتورة
+                    </div>
+                    <div class="title" id="secondTitle">
+                        الوجبات الأسعار العدد
+                    </div>
+                    <table id="invoiceTable" class="invoiceTable">
+                        <thead>
+                        <tr>
+                            <td>الوجبات</td>
+                            <td>سعر القطعة</td>
+                            <td>العدد</td>
+                            <td>السعر </td>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div>
+                        <label style="margin-top:30px; float: right; "> طلبات خاصة</label>
+                        <textarea id="description" class="orderInput" placeholder="هل لديك طلبات خاصة"  name="description" style="direction:RTL; max-width: none;"></textarea>
+                    </div>
+                    <div>
+                        <div id="Total" style="margin-top:30px; float: right ">
+                            <div id="TotalTitle">المجموع: €</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+                    <form data-request="orderform::onSave">
+
+                        <input type="hidden" value="{{user.email }}" name="email">
+                        <textarea id="ordersDescription"  name="ordersDescription" style="display:none;"></textarea>
+                        <input type="hidden" value="ar" name="lang">
+                        <button type="submit" class="button" style="float: left; border:none;">أرسال</button>
+
+                    </form>
+                    <a href="#" class="button" onClick="movePage(2,'ar');" style="float: right;">تراجع</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>";s:4:"code";N;s:5:"title";s:14:"الطلبات";s:3:"url";s:9:"/order_ar";s:6:"layout";s:8:"order_ar";s:9:"is_hidden";s:1:"0";s:5:"meals";a:2:{s:7:"results";s:1:"0";s:9:"sortOrder";s:9:"name desc";}s:7:"session";a:2:{s:8:"security";s:4:"user";s:8:"redirect";s:5:"login";}s:9:"orderform";a:0:{}}}

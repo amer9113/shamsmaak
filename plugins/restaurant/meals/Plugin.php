@@ -6,6 +6,9 @@ class Plugin extends PluginBase
 {
     public function registerComponents()
     {
+        return [
+            'Restaurant\Meals\Components\Meals' => 'meals',
+        ];
     }
 
     public function registerSettings()

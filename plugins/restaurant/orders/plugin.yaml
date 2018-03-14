@@ -1,0 +1,11 @@
+plugin:
+    name: 'restaurant.orders::lang.plugin.name'
+    description: 'restaurant.orders::lang.plugin.description'
+    author: Restaurant
+    icon: oc-icon-cart-plus
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Orders
+        url: restaurant/orders/orders
+        icon: icon-shopping-cart

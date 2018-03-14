@@ -1,0 +1,11 @@
+name: Meals
+modelClass: Restaurant\Meals\Models\Meal
+form: $/restaurant/meals/models/meal/fields.yaml
+defaultRedirect: restaurant/meals/meals
+create:
+    redirect: 'restaurant/meals/meals/update/:id'
+    redirectClose: restaurant/meals/meals
+update:
+    redirect: restaurant/meals/meals
+    redirectClose: restaurant/meals/meals
+preview: {  }

@@ -1,0 +1,129 @@
+title = "Meals"
+url = "/meals/:page?"
+layout = "default"
+is_hidden = 0
+
+[builderList]
+modelClass = "Restaurant\Meals\Models\Meal"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "meal-details"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+recordsPerPage = 500
+pageNumber = "{{ :page }}"
+
+==
+{% set genresArray = [] %}
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+{% set dateNow= "now"|date('Y-m-d') %}
+
+{% for record in records %}
+{% for genre in record.genres %}
+{% set genresArray = genresArray|merge({ (genre.slug) : (genre.genre_title) }) %}
+{% endfor %}
+{% endfor %}
+<div id="heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading-content">
+                    <h2>Meals</h2>
+                    <span>Home / <a href="{{ 'samples/Meals'|page }}">Meals</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="products-post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="product-heading">
+                    <h2>Meals</h2>
+                    <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="filters col-md-12 col-xs-12">
+                <ul id="filters" class="clearfix">
+                    <li><span class="filter" data-filter="all">All</span></li>
+                    {% for slug ,title in genresArray %}
+                    <li><span class="filter" data-filter=".{{ slug }}">{{title}}</span></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="row" id="Container">
+
+            {% for record in records %}
+            {% set classGenre = "" %}
+            {% for genre in record.genres %}
+            {% set classGenre= classGenre ~' '~ genre.slug %}
+            {% endfor %}
+            {% if (record.is_available != 0) and (dateNow >= record.start_date|date("Y-m-d")) and (dateNow <=
+            record.end_date|date("Y-m-d")) %}
+
+            <div class="col-md-3 col-sm-6 mix portfolio-item {{classGenre}}">
+                <div class="portfolio-wrapper">
+                    <div class="portfolio-thumb">
+                        <img src="{{ record.main_picture.path  }}" style=" background-position: center; " alt="">
+                        <div class="hover">
+                            <div class="hover-iner">
+                                <a class="fancybox"
+                                   href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}"><img
+                                        src="{{ 'assets/images/open-icon.png'|theme }}" alt=""></a>
+                                <span>{{ record.name }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="label-text">
+                        <h3><a href="'samples/single-post'">{{ record.name }}</a></h3>
+                        <span class="text-category"> {{ html_limit(record.description,50)|raw }}</span>
+                    </div>
+                </div>
+            </div>
+
+            {% endif %}
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+
+
+
+{% if records.lastPage > 1 %}
+<ul class="pagination">
+    <div class="row">
+        <div class="col-md-12">
+            {% if records.currentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Prev</a>
+            </li>
+            {% endif %}
+
+            {% for page in 1..records.lastPage %}
+            <li class="{{ records.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+            </li>
+            {% endfor %}
+
+            {% if records.lastPage > records.currentPage %}
+            <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a>
+            </li>
+            {% endif %}
+        </div>
+    </div>
+</ul>
+{% endif %}

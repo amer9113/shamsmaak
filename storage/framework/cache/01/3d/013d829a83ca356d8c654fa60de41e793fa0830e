@@ -1,0 +1,50 @@
+1520771395a:1:{s:18:"TopHomePart_ar.htm";a:5:{s:8:"fileName";s:18:"TopHomePart_ar.htm";s:7:"content";s:781:"<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading-section">
+                <h2>من نحن</h2>
+                <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="" >
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="containerHomePart">
+
+                <div class="top-left "  id="firstPart">المذاق الشامي هو الافضل</div>
+                <div class="top-left" id="secondPart">
+                   حكي حكي حكي حكي </div>
+                <img src="/themes/jtherczeg-grill/assets/imageDefault/TopHomePart.png" style="width: 100%;"  alt="" >
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+";s:5:"mtime";i:1520198070;s:6:"markup";s:780:"<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading-section">
+                <h2>من نحن</h2>
+                <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="" >
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="containerHomePart">
+
+                <div class="top-left "  id="firstPart">المذاق الشامي هو الافضل</div>
+                <div class="top-left" id="secondPart">
+                   حكي حكي حكي حكي </div>
+                <img src="/themes/jtherczeg-grill/assets/imageDefault/TopHomePart.png" style="width: 100%;"  alt="" >
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>";s:4:"code";N;}}

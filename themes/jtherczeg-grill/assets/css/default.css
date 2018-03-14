@@ -1,0 +1,373 @@
+html{
+    background-image: url("/themes/jtherczeg-grill/assets/imageDefault/background.png");
+}
+
+#inner {
+    display: table;
+    margin: 0 auto;
+}
+
+#TopHomePart{
+
+}
+/*.containerHomePart{*/
+    /*!*position: absolute;*!*/
+    /*top: 50%;*/
+    /*!*left: 50%;*!*/
+    /*!*transform: translate(0%, 0%);*!*/
+/*}*/
+/*.containerHomePart {*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+/*}*/
+.top-left{
+    position: absolute;
+    font-size: 1.5vw;
+    right: 15%;
+}
+.top-left#firstPart{
+    top: 6%;
+    left: 57%;
+    font-family: 'unzialishregular';
+    color: white ;
+}
+
+.top-right#firstPart{
+    position: absolute;
+    font-size: 1.5vw;
+    right: 15%;
+    top: 6%;
+    right: 17%;
+    font-family: 'unzialishregular';
+    color: white ;
+}
+
+.top-left#secondPart{
+    top: 28%;
+    left: 61%;
+    color: #4f3403 ;
+}
+
+.ar{
+    direction: rtl;
+}
+
+
+#BodyHomePart{
+    /*background-image: url(/themes/jtherczeg-grill/assets/imageDefault/BodyHomePart.png);*/
+    /*background-size: 100%;*/
+    /*height:420px;*/
+    /*background-repeat: no-repeat;*/
+}
+
+.count-input {
+    position: relative;
+    width: 100%;
+    max-width: 165px;
+    /*margin: 10px 0;*/
+}
+.count-input input {
+    width: 100%;
+    height: 36.92307692px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    background: none;
+    text-align: center;
+}
+.count-input input:focus {
+    outline: none;
+}
+.count-input .incr-btn {
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: auto;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 30px;
+    top: 50%;
+    right: 0;
+    margin-top: -15px;
+    text-decoration:none;
+}
+.count-input .incr-btn:first-child {
+    right: auto;
+    left: 0;
+    top: 46%;
+}
+.count-input.count-input-sm {
+    max-width: 125px;
+}
+.count-input.count-input-sm input {
+    height: 36px;
+}
+.count-input.count-input-lg {
+    max-width: 200px;
+}
+.count-input.count-input-lg input {
+    height: 70px;
+    border-radius: 3px;
+}
+
+.order{
+    background-color: #b5965b;
+    padding: 2% 2% 2% 2%;
+    height:auto;
+    overflow:hidden;
+    color: #583832;
+}
+.elements{
+
+    border: 2px solid #583832;
+
+}
+#elements{
+    padding-top:2%;
+}
+.left {
+    float: left;
+    width: 48%;
+    padding: 1%;
+}
+.leftDiv {
+    float: left;
+}
+.rightDiv {
+    float: right;
+}
+.right {
+    float: right;
+    width: 48%;
+    padding: 1%;
+}
+
+.title{
+    text-transform: uppercase;
+    font-family: 'unzialishregular';
+    text-align: center;
+}
+#TopOrder{
+    font-size: 5vw;
+}
+#secondTitle{
+    font-size: 3vw;
+}
+.name{
+   width: 65%;
+    float: left;
+}
+.priceAndUnit{
+    float: right;
+    width: 35%;
+    color: #b5965b;
+
+}
+.price{
+    float: left;
+    width: 59%;
+    background-color: #583832;
+    text-align: center;
+}
+.unit{
+    float: right;
+    width: 40%;
+    background-color: #583832;
+    text-align: center;
+}
+.signal{
+    float: left;
+    width: 59%;
+}
+.number{
+    float: right;
+    width: 40%;
+}
+
+.rowElements{
+    padding-bottom: 25px;
+}
+.button {
+    margin-top: 5px;
+    display: block;
+    width: 115px;
+    background: #b5965b ;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    color: #583832;
+    font-weight: bold;
+}
+
+.invoiceTable{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.invoiceTable thead tr td{
+    width: 25%;
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-family: 'unzialishregular';
+    text-align: center;
+}
+.invoiceTable tbody tr td{
+    width: 25%;
+    font-size: 1.5vw;
+    text-align: center;
+
+}
+.invoiceTable tbody{
+border-top: 2px solid #583832;
+}
+
+#TotalTitle, #totalPrice {
+    font-size: 4vw;
+    font-family: 'unzialishregular';
+    display: inline;
+}
+#followUs{
+    width:40%
+}
+#followUs{
+    width:40%
+}
+#more-info{
+    width: 23%;
+}
+#imageFotterDiv{
+    width: 37%;
+}
+.orderInput{
+    color:  #583832;
+    background-color:#c7ad7e ;
+    border-color: #583832;
+}
+::placeholder {
+    color: #966962;
+    opacity: 1; /* Firefox */
+}
+.logoLine{
+    padding: 20px 0;
+}
+
+#menu-icon {
+    /*margin-bottom: 5%;*/
+    display: hidden;
+    width: 100%;
+    /*height: 40px;*/
+    background: #b5965b  center;
+
+}
+
+a:hover#menu-icon {
+    border-radius: 4px 4px 0 0;
+}
+/* Smartphones (portrait) ----------- */
+@media screen and (max-width: 568px) {
+    /* Styles */
+    .name {
+        width: 50%;
+        font-size: 12px;
+    }
+    .priceAndUnit {
+        width: 50%;
+        font-size: 10px;
+    }
+    .price{
+        width: 49%;
+    }
+    .unit{
+        width: 49%;
+    }
+    .tr{
+        padding: 1px 1px;
+        line-height: 2px;
+    }
+    #TopOrder {
+        font-size: 30px;
+    }
+    #secondTitle {
+        font-size: 20px;
+    }
+    .invoiceTable thead tr td{
+        font-size: 10px;
+    }
+    .invoiceTable tbody tr td{
+        font-size: 10px;
+    }
+    #description{
+        height: 90px;
+    }
+    #Footerimage{
+        width: 200px;
+    }
+    #followUs{
+        width:90%
+    }
+    #imageFotterDiv{
+        width: 50%
+    }
+    #more-info{
+        width: 50%;
+    }
+    .social-bottom span{
+        font-size: 18px;
+
+    }
+
+
+    .social-bottom{
+        margin-top: 0;
+    }
+    .main-menu ul, .main-menu:active ul {
+
+        display: none;
+        float: right;
+        /*position: absolute;*/
+        /*padding: 20px;*/
+        /*margin-top: -25%;*/
+        /*display: inline;*/
+        background: #583832;
+        border: 5px solid #b5965b;
+        right: 20px;
+        top: 60px;
+        width: 100%;
+        border-radius: 4px 0 4px 4px;
+
+    }
+
+    .main-menu li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+        margin: 0;
+
+    }
+    #logoLine{
+        display: none;
+        height: 0px;
+
+    }
+    .main-menu:hover ul {
+        display: block;
+    }
+    #menu-icon {
+        font-size: 20px;
+        padding: 10px;
+        text-align: center;
+        display: block;
+        color:#583832;
+    }
+    .Mobile{
+        display: block !important;
+    }
+    #orderMenu{
+        margin-top: 40px;
+    }
+    .order{
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,50 @@
+1520991223a:1:{s:13:"bottom_ar.htm";a:5:{s:8:"fileName";s:13:"bottom_ar.htm";s:7:"content";s:1076:"<div class="main-footer">
+    <div class="row">
+        <div class="leftDiv" id="imageFotterDiv" >
+            <img src="/themes/jtherczeg-grill/assets/imageDefault/logo.png" style="width: 100%;"  alt="" >
+
+        </div>
+        <div class="leftDiv" id="more-info" >
+            <div class="more-info">
+                <h4 class="footer-title">لمزيد من المعلومات</h4>
+                <p>نحن هنا بخدمتكم </p>
+                <ul>
+                    <li><i class="fa fa-phone"></i>0702250403</li>
+                    <li><i class="fa fa-globe"></i>Shaamsmaak,<br>Goeverneurlaan 655,<br>2523 Den Haag</li>
+                    <li><i class="fa fa-envelope"></i><a href="mailto:info@shaamsmaak.nl">info@shaamsmaak.nl</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="leftDiv" id="followUs" >
+            <div class="social-bottom">
+                <span>تابعونا على صفحة الفيس بوك &nbsp;&nbsp;<a href="#" class="fa fa-facebook"></a></span>
+            </div>
+        </div>
+
+    </div>
+</div>
+";s:5:"mtime";i:1520978998;s:6:"markup";s:1075:"<div class="main-footer">
+    <div class="row">
+        <div class="leftDiv" id="imageFotterDiv" >
+            <img src="/themes/jtherczeg-grill/assets/imageDefault/logo.png" style="width: 100%;"  alt="" >
+
+        </div>
+        <div class="leftDiv" id="more-info" >
+            <div class="more-info">
+                <h4 class="footer-title">لمزيد من المعلومات</h4>
+                <p>نحن هنا بخدمتكم </p>
+                <ul>
+                    <li><i class="fa fa-phone"></i>0702250403</li>
+                    <li><i class="fa fa-globe"></i>Shaamsmaak,<br>Goeverneurlaan 655,<br>2523 Den Haag</li>
+                    <li><i class="fa fa-envelope"></i><a href="mailto:info@shaamsmaak.nl">info@shaamsmaak.nl</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="leftDiv" id="followUs" >
+            <div class="social-bottom">
+                <span>تابعونا على صفحة الفيس بوك &nbsp;&nbsp;<a href="#" class="fa fa-facebook"></a></span>
+            </div>
+        </div>
+
+    </div>
+</div>";s:4:"code";N;}}

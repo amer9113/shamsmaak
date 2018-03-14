@@ -1,0 +1,127 @@
+1520990657a:1:{s:9:"order.htm";a:7:{s:8:"fileName";s:9:"order.htm";s:7:"content";s:3595:"description = "Order layout"
+
+
+[session]
+security = "all"
+==
+<!DOCTYPE html>
+<html lang="en">
+{% partial "meta" %}
+<head>
+
+    <link rel="stylesheet" href="themes/jtherczeg-grill/assets/css/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="themes/jtherczeg-grill/assets/css/default.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/favicon-16x16.png">
+    <link rel="manifest" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<!--[if lt IE 7]>
+    <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<![endif]-->
+	
+<header>
+    {% partial "top" %}
+    {% partial "nav" %}
+</header>
+
+	{% page %}
+    
+<footer>
+    <div class="container">
+       {% partial "socials" %}             
+       {% partial "bottom" %}             
+       {% partial "footer" %}             
+    </div>
+</footer>
+    
+<!-- Scripts -->
+
+<script src="{{ 'assets/vendor/modernizr-2.6.1-respond-1.1.0.min.js'|theme }}"></script>
+<!--<script src="{{ 'assets/vendor/jquery-1.11.0.min.js'|theme }}"></script>-->
+<script src="{{ 'assets/vendor/jquery-3.1.1.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/jquery.gmap3.min.js'|theme }}"></script>
+<script src="{{ 'assets/js/plugins.js'|theme }}"></script>
+<script src="{{ 'assets/js/main.js'|theme }}"></script>
+<script src="{{ 'assets/js/counter.js'|theme }}"></script>
+
+<script src="{{ 'assets/js/order.js'|theme }}"></script>
+{% framework extras %}
+{% scripts %}
+
+</body>
+</html>";s:5:"mtime";i:1520766852;s:6:"markup";s:3534:"<!DOCTYPE html>
+<html lang="en">
+{% partial "meta" %}
+<head>
+
+    <link rel="stylesheet" href="themes/jtherczeg-grill/assets/css/stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="themes/jtherczeg-grill/assets/css/default.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/favicon-16x16.png">
+    <link rel="manifest" href="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="themes/jtherczeg-grill/assets/imageDefault/favicon.ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<!--[if lt IE 7]>
+    <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<![endif]-->
+	
+<header>
+    {% partial "top" %}
+    {% partial "nav" %}
+</header>
+
+	{% page %}
+    
+<footer>
+    <div class="container">
+       {% partial "socials" %}             
+       {% partial "bottom" %}             
+       {% partial "footer" %}             
+    </div>
+</footer>
+    
+<!-- Scripts -->
+
+<script src="{{ 'assets/vendor/modernizr-2.6.1-respond-1.1.0.min.js'|theme }}"></script>
+<!--<script src="{{ 'assets/vendor/jquery-1.11.0.min.js'|theme }}"></script>-->
+<script src="{{ 'assets/vendor/jquery-3.1.1.js'|theme }}"></script>
+<script src="{{ 'assets/vendor/jquery.gmap3.min.js'|theme }}"></script>
+<script src="{{ 'assets/js/plugins.js'|theme }}"></script>
+<script src="{{ 'assets/js/main.js'|theme }}"></script>
+<script src="{{ 'assets/js/counter.js'|theme }}"></script>
+
+<script src="{{ 'assets/js/order.js'|theme }}"></script>
+{% framework extras %}
+{% scripts %}
+
+</body>
+</html>";s:4:"code";N;s:11:"description";s:12:"Order layout";s:7:"session";a:1:{s:8:"security";s:3:"all";}}}

@@ -1,16 +1,21 @@
 <div id="top-header">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="home-account">
-                    <a href="{{ 'home'|page }}">Home</a>
-                    <a href="#">My account</a>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="cart-info">
-                    <i class="fa fa-shopping-cart"></i>
-                    (<a href="#">5 items</a>) in your cart (<a href="#">$45.80</a>)
+                    <a href="{{ 'home'|page }}" style="float: left;">Home</a>
+                    {% if user %}
+                    <a href="{{ 'login'|page }}" style="float: left;">My account</a>
+                    {% endif %}
+
+                    {% if user %}
+
+                    <a data-request="onLogout" style="float: right;" data-request-data="redirect: '/'">Sign out</a>
+                    {% else %}
+                    <a href="{{ 'login'|page }}" style="float: right;">Login</a>
+                    {% endif %}
+
+                    <a href="{{ 'home_ar'|page }}" style="float: right;">(Arabische)</a>
                 </div>
             </div>
         </div>

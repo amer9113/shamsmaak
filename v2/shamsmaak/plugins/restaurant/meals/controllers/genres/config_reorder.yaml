@@ -1,0 +1,4 @@
+title: Genres
+modelClass: Restaurant\Meals\Models\Genre
+toolbar:
+    buttons: reorder_toolbar

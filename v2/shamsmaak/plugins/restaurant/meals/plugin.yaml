@@ -1,0 +1,16 @@
+plugin:
+    name: 'restaurant.meals::lang.plugin.name'
+    description: 'restaurant.meals::lang.plugin.description'
+    author: Restaurant
+    icon: oc-icon-coffee
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Meals
+        url: restaurant/meals/meals
+        icon: icon-cutlery
+        sideMenu:
+            side-menu-item:
+                label: Genres
+                url: restaurant/meals/genres
+                icon: icon-tag

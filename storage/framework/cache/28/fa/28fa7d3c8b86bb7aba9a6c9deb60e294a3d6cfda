@@ -1,61 +1,27 @@
-1519055015a:1:{s:10:"slider.htm";a:5:{s:8:"fileName";s:10:"slider.htm";s:7:"content";s:1491:"<div class="flexslider">
+1520989220a:1:{s:10:"slider.htm";a:5:{s:8:"fileName";s:10:"slider.htm";s:7:"content";s:477:"<div class="flexslider">
+
     <ul class="slides">
-        <li>
-            <div class="slider-caption">
-                <h1>Delicious Meals</h1>
-                <p>Donec justo dui, semper vitae aliquam euzali, ornare pretium enim. Maecenas molestie diam
-                <br><br>eget tellus luctus fermentum.</p>
-                <a href="{{ 'samples/single-post'|page }}">Shop Now</a>
-            </div>
-        <img src="{{ 'assets/images/slide1.jpg'|theme }}" alt="" />
+        <!--<div class="slider-caption">-->
+            <!--<div id="outer" style="width:100%">-->
+                <!--<div id="inner"><img src="/themes/jtherczeg-grill/assets/imageDefault/logo.png"-->
+                                     <!--style="max-width: 400px"/></div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <img src="{{ 'assets/images/imageTop.png'|theme }}" alt=""/>
         </li>
-            <li>
-                <div class="slider-caption">
-                    <h1>Ice-cream Menus</h1>
-                    <p>Nulla id iaculis ligula. Vivamus mattis quam eget urna tincidunt consequat. Nullam 
-                    <br><br>consectetur tempor neque vitae iaculis. Aliquam erat volutpat.</p>
-                    <a href="{{ 'samples/single-post'|page }}">More Details</a>
-                </div>
-            <img src="{{ 'assets/images/slide2.jpg'|theme }}" alt="" />
-            </li>
-            <li>
-                <div class="slider-caption">
-                    <h1>Healthy Drinks</h1>
-                    <p>Maecenas fermentum est ut elementum vulputate. Ut vel consequat urna. Ut aliquet 
-                    <br><br>ornare massa, quis dapibus quam condimentum id.</p>
-                    <a href="{{ 'samples/single-post'|page }}">Get Ready</a>
-                </div>
-            <img src="{{ 'assets/images/slide3.jpg'|theme }}" alt="" />
-            </li>
-        </ul>
-    </div>";s:5:"mtime";i:1518444146;s:6:"markup";s:1491:"<div class="flexslider">
+
+    </ul>
+</div>";s:5:"mtime";i:1520081245;s:6:"markup";s:477:"<div class="flexslider">
+
     <ul class="slides">
-        <li>
-            <div class="slider-caption">
-                <h1>Delicious Meals</h1>
-                <p>Donec justo dui, semper vitae aliquam euzali, ornare pretium enim. Maecenas molestie diam
-                <br><br>eget tellus luctus fermentum.</p>
-                <a href="{{ 'samples/single-post'|page }}">Shop Now</a>
-            </div>
-        <img src="{{ 'assets/images/slide1.jpg'|theme }}" alt="" />
+        <!--<div class="slider-caption">-->
+            <!--<div id="outer" style="width:100%">-->
+                <!--<div id="inner"><img src="/themes/jtherczeg-grill/assets/imageDefault/logo.png"-->
+                                     <!--style="max-width: 400px"/></div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <img src="{{ 'assets/images/imageTop.png'|theme }}" alt=""/>
         </li>
-            <li>
-                <div class="slider-caption">
-                    <h1>Ice-cream Menus</h1>
-                    <p>Nulla id iaculis ligula. Vivamus mattis quam eget urna tincidunt consequat. Nullam 
-                    <br><br>consectetur tempor neque vitae iaculis. Aliquam erat volutpat.</p>
-                    <a href="{{ 'samples/single-post'|page }}">More Details</a>
-                </div>
-            <img src="{{ 'assets/images/slide2.jpg'|theme }}" alt="" />
-            </li>
-            <li>
-                <div class="slider-caption">
-                    <h1>Healthy Drinks</h1>
-                    <p>Maecenas fermentum est ut elementum vulputate. Ut vel consequat urna. Ut aliquet 
-                    <br><br>ornare massa, quis dapibus quam condimentum id.</p>
-                    <a href="{{ 'samples/single-post'|page }}">Get Ready</a>
-                </div>
-            <img src="{{ 'assets/images/slide3.jpg'|theme }}" alt="" />
-            </li>
-        </ul>
-    </div>";s:4:"code";N;}}
+
+    </ul>
+</div>";s:4:"code";N;}}

@@ -24,7 +24,27 @@ class __TwigTemplate_0ea59c54133c47ab6f384acc22ccb6d750d1ce834669138a8b388c87afd
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("meta"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         // line 4
-        echo "
+        echo "<head>
+    <link rel=\"stylesheet\" href=\"themes/jtherczeg-grill/assets/css/stylesheet.css\" type=\"text/css\" charset=\"utf-8\" />
+    <link rel=\"stylesheet\" href=\"themes/jtherczeg-grill/assets/css/default.css\">
+    <link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-57x57.png\">
+    <link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-60x60.png\">
+    <link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-72x72.png\">
+    <link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-76x76.png\">
+    <link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-114x114.png\">
+    <link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-120x120.png\">
+    <link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-144x144.png\">
+    <link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-152x152.png\">
+    <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-180x180.png\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/android-icon-192x192.png\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/favicon-32x32.png\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"96x96\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/favicon-96x96.png\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/favicon-16x16.png\">
+    <link rel=\"manifest\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/manifest.json\">
+    <meta name=\"msapplication-TileColor\" content=\"#ffffff\">
+    <meta name=\"msapplication-TileImage\" content=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/ms-icon-144x144.png\">
+    <meta name=\"theme-color\" content=\"#ffffff\">
+</head>
 <body>
 <!--[if lt IE 7]>
     <p class=\"chromeframe\">You are using an outdated browser. <a href=\"http://browsehappy.com/\">Upgrade your browser today</a> or <a href=\"http://www.google.com/chromeframe/?redirect=true\">install Google Chrome Frame</a> to better experience this site.</p>
@@ -32,39 +52,39 @@ class __TwigTemplate_0ea59c54133c47ab6f384acc22ccb6d750d1ce834669138a8b388c87afd
 \t
 <header>
     ";
-        // line 11
+        // line 31
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("top"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 12
+        // line 32
         echo "    ";
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("nav"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 13
+        // line 33
         echo "</header>
 
 \t";
-        // line 15
+        // line 35
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 16
+        // line 36
         echo "    
 <footer>
     <div class=\"container\">
        ";
-        // line 19
+        // line 39
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("socials"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         echo "             
        ";
-        // line 20
+        // line 40
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("bottom"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         echo "             
        ";
-        // line 21
+        // line 41
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
@@ -73,38 +93,43 @@ class __TwigTemplate_0ea59c54133c47ab6f384acc22ccb6d750d1ce834669138a8b388c87afd
 </footer>
     
 <!-- Scripts -->
+
 <script src=\"";
-        // line 26
+        // line 47
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/vendor/modernizr-2.6.1-respond-1.1.0.min.js");
         echo "\"></script>
-<script src=\"";
-        // line 27
+<!--<script src=\"";
+        // line 48
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/vendor/jquery-1.11.0.min.js");
+        echo "\"></script>-->
+<script src=\"";
+        // line 49
+        echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/vendor/jquery-3.1.1.js");
         echo "\"></script>
 <script src=\"";
-        // line 28
+        // line 50
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/vendor/jquery.gmap3.min.js");
         echo "\"></script>
 <script src=\"";
-        // line 29
+        // line 51
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/js/plugins.js");
         echo "\"></script>
 <script src=\"";
-        // line 30
+        // line 52
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/js/main.js");
         echo "\"></script>
 ";
-        // line 31
+        // line 53
         echo '<script src="'. Request::getBasePath()
                 .'/modules/system/assets/js/framework.js"></script>'.PHP_EOL;
         echo '<script src="'. Request::getBasePath()
                     .'/modules/system/assets/js/framework.extras.js"></script>'.PHP_EOL;
         echo '<link rel="stylesheet" property="stylesheet" href="'. Request::getBasePath()
                     .'/modules/system/assets/css/framework.extras.css">'.PHP_EOL;
-        // line 32
+        // line 54
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 33
+        // line 55
         echo "
 </body>
 </html>";
@@ -122,7 +147,7 @@ class __TwigTemplate_0ea59c54133c47ab6f384acc22ccb6d750d1ce834669138a8b388c87afd
 
     public function getDebugInfo()
     {
-        return array (  108 => 33,  105 => 32,  98 => 31,  94 => 30,  90 => 29,  86 => 28,  82 => 27,  78 => 26,  68 => 21,  62 => 20,  56 => 19,  51 => 16,  49 => 15,  45 => 13,  40 => 12,  36 => 11,  27 => 4,  23 => 3,  19 => 1,);
+        return array (  133 => 55,  130 => 54,  123 => 53,  119 => 52,  115 => 51,  111 => 50,  107 => 49,  103 => 48,  99 => 47,  88 => 41,  82 => 40,  76 => 39,  71 => 36,  69 => 35,  65 => 33,  60 => 32,  56 => 31,  27 => 4,  23 => 3,  19 => 1,);
     }
 
     public function getSourceContext()
@@ -130,7 +155,27 @@ class __TwigTemplate_0ea59c54133c47ab6f384acc22ccb6d750d1ce834669138a8b388c87afd
         return new Twig_Source("<!DOCTYPE html>
 <html lang=\"en\">
 {% partial \"meta\" %}
-
+<head>
+    <link rel=\"stylesheet\" href=\"themes/jtherczeg-grill/assets/css/stylesheet.css\" type=\"text/css\" charset=\"utf-8\" />
+    <link rel=\"stylesheet\" href=\"themes/jtherczeg-grill/assets/css/default.css\">
+    <link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-57x57.png\">
+    <link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-60x60.png\">
+    <link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-72x72.png\">
+    <link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-76x76.png\">
+    <link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-114x114.png\">
+    <link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-120x120.png\">
+    <link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-144x144.png\">
+    <link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-152x152.png\">
+    <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/apple-icon-180x180.png\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/android-icon-192x192.png\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/favicon-32x32.png\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"96x96\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/favicon-96x96.png\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/favicon-16x16.png\">
+    <link rel=\"manifest\" href=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/manifest.json\">
+    <meta name=\"msapplication-TileColor\" content=\"#ffffff\">
+    <meta name=\"msapplication-TileImage\" content=\"themes/jtherczeg-grill/assets/imageDefault/favicon.ico/ms-icon-144x144.png\">
+    <meta name=\"theme-color\" content=\"#ffffff\">
+</head>
 <body>
 <!--[if lt IE 7]>
     <p class=\"chromeframe\">You are using an outdated browser. <a href=\"http://browsehappy.com/\">Upgrade your browser today</a> or <a href=\"http://www.google.com/chromeframe/?redirect=true\">install Google Chrome Frame</a> to better experience this site.</p>
@@ -152,8 +197,10 @@ class __TwigTemplate_0ea59c54133c47ab6f384acc22ccb6d750d1ce834669138a8b388c87afd
 </footer>
     
 <!-- Scripts -->
+
 <script src=\"{{ 'assets/vendor/modernizr-2.6.1-respond-1.1.0.min.js'|theme }}\"></script>
-<script src=\"{{ 'assets/vendor/jquery-1.11.0.min.js'|theme }}\"></script>
+<!--<script src=\"{{ 'assets/vendor/jquery-1.11.0.min.js'|theme }}\"></script>-->
+<script src=\"{{ 'assets/vendor/jquery-3.1.1.js'|theme }}\"></script>
 <script src=\"{{ 'assets/vendor/jquery.gmap3.min.js'|theme }}\"></script>
 <script src=\"{{ 'assets/js/plugins.js'|theme }}\"></script>
 <script src=\"{{ 'assets/js/main.js'|theme }}\"></script>

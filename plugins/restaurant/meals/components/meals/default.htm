@@ -1,0 +1,8 @@
+{%  set meals = __SELF__.meals %}
+
+
+<ul>
+    {% for meal in meals %}
+        <li>{{ meal.name }} {{ meal.price }}</li>
+    {% endfor %}
+</ul>

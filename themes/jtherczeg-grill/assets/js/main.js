@@ -40,4 +40,14 @@ $(document).ready(function() {
 
 
 });
+$(function(){
+    var $select = $(".counter");
+    for (i=0;i<=50;i++){
+        $select.append($('<option></option>').val(i).html(i))
+    }
+});
+
+$('#add').click(function() {
+    alert('asd');
+});
 

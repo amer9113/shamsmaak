@@ -1,0 +1,50 @@
+1520989220a:1:{s:15:"TopHomePart.htm";a:5:{s:8:"fileName";s:15:"TopHomePart.htm";s:7:"content";s:843:"<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading-section">
+                <h2>Who we are</h2>
+                <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="" >
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="containerHomePart">
+
+                <div class="top-left"  id="firstPart">Shaam Smaak is the Best</div>
+                <div class="top-left" id="secondPart">
+                    I know that this could be solved fairly easily with Javascript, but I'm only interested in a pure CSS solution.</div>
+                <img src="/themes/jtherczeg-grill/assets/imageDefault/TopHomePart.png" style="width: 100%;"  alt="" >
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+";s:5:"mtime";i:1520165387;s:6:"markup";s:842:"<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="heading-section">
+                <h2>Who we are</h2>
+                <img src="{{ 'assets/images/under-heading.png'|theme }}" alt="" >
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="containerHomePart">
+
+                <div class="top-left"  id="firstPart">Shaam Smaak is the Best</div>
+                <div class="top-left" id="secondPart">
+                    I know that this could be solved fairly easily with Javascript, but I'm only interested in a pure CSS solution.</div>
+                <img src="/themes/jtherczeg-grill/assets/imageDefault/TopHomePart.png" style="width: 100%;"  alt="" >
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>";s:4:"code";N;}}

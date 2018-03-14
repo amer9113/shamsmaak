@@ -1,0 +1,4 @@
+title: Parties
+modelClass: Restaurant\Parties\Models\Party
+toolbar:
+    buttons: reorder_toolbar

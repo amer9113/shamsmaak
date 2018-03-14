@@ -2,18 +2,25 @@ title = "Home"
 url = "/"
 layout = "default"
 description = "Home Page"
-meta_author = "templatemo and József Tamás Herczeg"
-meta_description = "Free restaurant theme by templatemo, converted for OctoberCMS"
-meta_keywords = "business, restaurant, blog, responsive, bootstrap"
 ==
-<div id="slider">
+
+
+<div id="slider_ar">
     {% partial "slider" %}
 </div>
-    
-<div id="services">
-    {% partial "services" %}
+
+
+<!--<div id="services">-->
+    <!--{% partial "services" %}-->
+<!--</div>-->
+<div id="TopHomePart">
+    {% partial "TopHomePart" %}
 </div>
-    
+
+<div id="BodyHomePart">
+    {% partial "BodyHomePart" %}
+</div>
+
 <div id="latest-blog">
     {% partial "latest-blog" %}
 </div>

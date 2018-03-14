@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table restaurant_parties_'
+    - builder_table_create_restaurant_parties_.php
+1.0.3:
+    - 'Updated table restaurant_parties_'
+    - builder_table_update_restaurant_parties_.php
+1.0.4:
+    - 'Updated table restaurant_parties_'
+    - builder_table_update_restaurant_parties__2.php
+1.0.5:
+    - 'Updated table restaurant_parties_'
+    - builder_table_update_restaurant_parties__3.php

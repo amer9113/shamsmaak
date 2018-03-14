@@ -16,7 +16,7 @@ class __TwigTemplate_40b8cb942676fa1569a27ddcac07317adffb49121c04e3336e45b365a88
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<div id=\"slider\">
+        echo "<div id=\"slider_ar\">
     ";
         // line 2
         $context['__cms_partial_params'] = [];
@@ -24,23 +24,41 @@ class __TwigTemplate_40b8cb942676fa1569a27ddcac07317adffb49121c04e3336e45b365a88
         unset($context['__cms_partial_params']);
         // line 3
         echo "</div>
-    
-<div id=\"services\">
-    ";
-        // line 6
+
+
+<!--<div id=\"services\">-->
+    <!--";
+        // line 7
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("services"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 7
-        echo "</div>
-    
-<div id=\"latest-blog\">
+        echo "-->
+<!--</div>-->
+<div id=\"TopHomePart\">
     ";
         // line 10
         $context['__cms_partial_params'] = [];
-        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("latest-blog"        , $context['__cms_partial_params']        , true        );
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("TopHomePart"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         // line 11
+        echo "</div>
+
+<div id=\"BodyHomePart\">
+    ";
+        // line 14
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("BodyHomePart"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 15
+        echo "</div>
+
+<div id=\"latest-blog\">
+    ";
+        // line 18
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("latest-blog"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 19
         echo "</div>
 
 <div class=\"container\">
@@ -49,7 +67,7 @@ class __TwigTemplate_40b8cb942676fa1569a27ddcac07317adffb49121c04e3336e45b365a88
             <div class=\"heading-section\">
                 <h2>What Customers Say</h2>
                 <img src=\"";
-        // line 18
+        // line 26
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/images/under-heading.png");
         echo "\" alt=\"\" >
             </div>
@@ -57,11 +75,11 @@ class __TwigTemplate_40b8cb942676fa1569a27ddcac07317adffb49121c04e3336e45b365a88
     </div>
 \t<div id=\"testimonails\">
 \t\t";
-        // line 23
+        // line 31
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("testimonials"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 24
+        // line 32
         echo "\t</div>
 </div>";
     }
@@ -78,19 +96,27 @@ class __TwigTemplate_40b8cb942676fa1569a27ddcac07317adffb49121c04e3336e45b365a88
 
     public function getDebugInfo()
     {
-        return array (  65 => 24,  61 => 23,  53 => 18,  44 => 11,  40 => 10,  35 => 7,  31 => 6,  26 => 3,  22 => 2,  19 => 1,);
+        return array (  83 => 32,  79 => 31,  71 => 26,  62 => 19,  58 => 18,  53 => 15,  49 => 14,  44 => 11,  40 => 10,  32 => 7,  26 => 3,  22 => 2,  19 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Twig_Source("<div id=\"slider\">
+        return new Twig_Source("<div id=\"slider_ar\">
     {% partial \"slider\" %}
 </div>
-    
-<div id=\"services\">
-    {% partial \"services\" %}
+
+
+<!--<div id=\"services\">-->
+    <!--{% partial \"services\" %}-->
+<!--</div>-->
+<div id=\"TopHomePart\">
+    {% partial \"TopHomePart\" %}
 </div>
-    
+
+<div id=\"BodyHomePart\">
+    {% partial \"BodyHomePart\" %}
+</div>
+
 <div id=\"latest-blog\">
     {% partial \"latest-blog\" %}
 </div>

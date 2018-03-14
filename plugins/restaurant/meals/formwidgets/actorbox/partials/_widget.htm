@@ -1,0 +1,23 @@
+<style type="text/css">
+    .select2-container{
+        width:100% !important;
+        display:block;
+    }
+</style>
+
+<select class="s2" multiple>
+    <option value="1">Meat</option>
+    <option value="2">Cheese</option>
+    <option value="3">Rice</option>
+</select>
+
+<script type="text/javascript">
+    $(document).on('render', function(){
+        $('.s2').select2({
+            placeholder: 'Add actors',
+            tags: true
+        })
+    });
+
+</script>
+

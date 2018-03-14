@@ -1,0 +1,45 @@
+1520991223a:1:{s:10:"top_ar.htm";a:5:{s:8:"fileName";s:10:"top_ar.htm";s:7:"content";s:903:"
+<div id="top-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="home-account">
+                    <a href="{{ 'home_ar'|page }}" style="float: right ;">الصفحة الرئيسية</a>
+                    {% if user %}
+                    <a href="{{ 'login_ar'|page }}" style="float: right ;">حسابي</a>
+                    {% endif %}
+                    {% if user %}
+
+                    <a data-request="onLogout" style="float: left;" data-request-data="redirect: '/'">تسحيل خروج</a>
+                    {% else %}
+                    <a href="{{ 'login_ar'|page }}" style="float: left;">تسجيل دخول</a>
+                    {% endif %}
+
+                    <a href="{{ 'home'|page }}" style="float: left;">(Nederlands)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+";s:5:"mtime";i:1520988986;s:6:"markup";s:901:"<div id="top-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="home-account">
+                    <a href="{{ 'home_ar'|page }}" style="float: right ;">الصفحة الرئيسية</a>
+                    {% if user %}
+                    <a href="{{ 'login_ar'|page }}" style="float: right ;">حسابي</a>
+                    {% endif %}
+                    {% if user %}
+
+                    <a data-request="onLogout" style="float: left;" data-request-data="redirect: '/'">تسحيل خروج</a>
+                    {% else %}
+                    <a href="{{ 'login_ar'|page }}" style="float: left;">تسجيل دخول</a>
+                    {% endif %}
+
+                    <a href="{{ 'home'|page }}" style="float: left;">(Nederlands)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>";s:4:"code";N;}}

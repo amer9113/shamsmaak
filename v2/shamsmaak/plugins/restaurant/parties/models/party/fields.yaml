@@ -1,0 +1,62 @@
+fields:
+    name:
+        label: 'The name in Dutch'
+        span: full
+        required: 1
+        type: text
+    name_ar:
+        label: 'The name in Arabic'
+        span: full
+        required: 1
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        disabled: 0
+        hidden: 0
+        required: 1
+        preset:
+            field: name
+            type: slug
+        type: text
+    is_available:
+        label: 'Show in site'
+        span: auto
+        type: switch
+    date:
+        label: 'Date picker'
+        mode: date
+        span: left
+        type: datepicker
+    description:
+        label: 'Description in Dutch'
+        size: ''
+        span: full
+        type: richeditor
+    description_ar:
+        label: 'Description in Arabic'
+        span: full
+        size: ''
+        type: richeditor
+    poster:
+        label: 'The main picture'
+        span: auto
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        imageWidth: '100'
+        imageHeight: '100'
+        type: fileupload
+    party_galary:
+        label: Galary
+        span: right
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        imageWidth: '80'
+        imageHeight: '80'
+        type: fileupload

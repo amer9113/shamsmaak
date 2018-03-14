@@ -1,0 +1,205 @@
+title = "BESTELEN"
+url = "/order"
+layout = "order"
+is_hidden = 0
+
+[meals]
+results = 0
+sortOrder = "name desc"
+
+[session]
+security = "user"
+redirect = "login"
+
+[orderform]
+==
+{%  set meals = meals.meals %}
+{% set counter = 0 %}
+{% set LeftDiv='' %}
+{% set RightDiv='' %}
+<style>
+
+
+</style>
+
+<!--<div id="heading">-->
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div class="col-md-12">-->
+<!--<div class="heading-content">-->
+<!--<h2>BESTELEN</h2>-->
+<!--<span>Home / <a href="{{ 'samples/order'|page }}">BESTELEN</a></span>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+{% flash success %}
+<h1 style="rgin-right: 20px;">{{message}}</h1>
+{% endflash %}
+<div id="orderMenu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="order">
+                    <div class="title" id="TopOrder">
+                        BESTELEN
+                    </div>
+                    <div class="title" id="secondTitle">
+                        Maaltijd Prijs AANTAL
+                    </div>
+                    <div id="elements">
+                        <div class="left elements">
+                            {% for meal in meals %}
+                            {% set counter = counter+1 %}
+                            {% if (counter % 2) > 0 %}
+                            <div class="rowElements">
+                                <div class="name">
+                                    <input type="hidden" id="mealName{{ meal.id }}" name="mealName{{ meal.id }}"
+                                           value="{{ meal.name }}" required>
+                                    <input type="hidden" id="mealNameArabic{{ meal.id }}"
+                                           name="mealNameArabic{{ meal.id }}" value="{{ meal.name_ar }}" required> {{
+                                    meal.name }}
+                                </div>
+                                <div class="priceAndUnit">
+                                    <div class="price">
+                                        <input type="hidden" id="mealPrice{{ meal.id }}" name="mealPrice"
+                                               value="{{ meal.price }}" required>€{{meal.price}}
+                                    </div>
+                                    <div class="unit">
+                                        <div class="count-input space-bottom">
+                                            <a class="incr-btn" data-action="decrease" href="#"
+                                               onClick="addToOrder({{ meal.id }},-1);">–</a>
+                                            <input class="quantity" id="quantity{{ meal.id }}" type="hidden"
+                                                   name="quantity"
+                                                   value="0" max="50"/>
+                                            <div id="quantityText{{ meal.id }}">0</div>
+                                            <a class="incr-btn" data-action="increase" href="#"
+                                               onClick="addToOrder({{ meal.id }},1);">&plus;</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div  id="tr{{ meal.id }}" style="display: none;">
+                                <input class="tr orderInput" placeholder="Heeft u speciale verzoeken"  type="text" id="mealDescription{{ meal.id }}" name="mealDescription{{ meal.id }}"
+                                       style="margin-top: 0px;margin-bottom:4px"></td>
+                            </div>
+                            {% endif%}
+                            {% endfor %}
+                            {{LeftDiv}}
+                        </div>
+
+                        <div class="right elements">
+                            {% set counter =0%}
+                            {% for meal in meals %}
+                            {% set counter = counter+1 %}
+                            {% if (counter % 2) ==0 %}
+                            <div class="rowElements">
+                                <div class="name">
+                                    <input type="hidden" id="mealName{{ meal.id }}" name="mealName{{ meal.id }}"
+                                           value="{{ meal.name }}" required>
+                                    <input type="hidden" id="mealNameArabic{{ meal.id }}"
+                                           name="mealNameArabic{{ meal.id }}" value="{{ meal.name_ar }}" required> {{
+                                    meal.name }}
+                                </div>
+                                <div class="priceAndUnit">
+                                    <div class="price">
+                                        <input type="hidden" id="mealPrice{{ meal.id }}" name="mealPrice"
+                                               value="{{ meal.price }}" required>€{{meal.price}}
+                                    </div>
+                                    <div class="unit">
+                                        <div class="count-input space-bottom">
+                                            <a class="incr-btn" data-action="decrease" href="#"
+                                               onClick="addToOrder({{ meal.id }},-1);">–</a>
+                                            <input class="quantity" id="quantity{{ meal.id }}" type="hidden"
+                                                   name="quantity"
+                                                   value="0" max="50"/>
+                                            <div id="quantityText{{ meal.id }}">0</div>
+                                            <a class="incr-btn" data-action="increase" href="#"
+                                               onClick="addToOrder({{ meal.id }},1);">&plus;</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div  id="tr{{ meal.id }}" style="display: none;">
+                                <input class="tr orderInput" placeholder="Heeft u speciale verzoeken"  type="text"  id="mealDescription{{ meal.id }}" name="mealDescription{{ meal.id }}"
+                                       style="margin-top: 0px;margin-bottom:4px;"></td>
+                            </div>
+                            {% endif%}
+                            {% endfor %}
+                            {{LeftDiv}}
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div>
+                    <a id="buttonDone" href="#" class="button" onClick="movePage(1,'en');"
+                       style="display: none; float: right;">Bestelling</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div id="invoice" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="order">
+                    <div class="title" id="TopOrder">
+                        Bill
+                    </div>
+                    <div class="title" id="secondTitle">
+                        Maaltijd Prijs AANTAL
+                    </div>
+                    <table id="invoiceTable" class="invoiceTable">
+                        <thead>
+                        <tr>
+                            <td>Maaltijd</td>
+                            <td>Eenheid prijs</td>
+                            <td>Aantal stuks</td>
+                            <td>Totale prijs</td>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div>
+                        <label style="margin-top:30px;  ">Speciale verzoeken</label>
+                        <textarea id="description" class="orderInput" placeholder="Heeft u speciale verzoeken"  name="description" style=" max-width: none;"></textarea>
+                    </div>
+                    <div>
+                        <div id="Total" style="margin-top:30px; ">
+                            <div id="TotalTitle">Totaal: €</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+                    <form data-request="orderform::onSave">
+
+                        <input type="hidden" value="{{user.email }}" name="email">
+                        <textarea id="ordersDescription"  name="ordersDescription" style="display:none;"></textarea>
+                        <input type="hidden" value="nl" name="lang">
+                        <button type="submit" class="button" style="float: right; border:none;">Sturen</button>
+
+                    </form>
+                    <a href="#" class="button" onClick="movePage(2,'en');" style="float: left;">Terug</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>

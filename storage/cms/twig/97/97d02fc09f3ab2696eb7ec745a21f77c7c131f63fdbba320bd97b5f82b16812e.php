@@ -19,19 +19,43 @@ class __TwigTemplate_2dfa0cfa6d7d9e353648ee006b2a09b4744bea50e52f1ed08fcbc81a486
         echo "<div id=\"top-header\">
     <div class=\"container\">
         <div class=\"row\">
-            <div class=\"col-md-6\">
+            <div class=\"col-md-12\">
                 <div class=\"home-account\">
                     <a href=\"";
         // line 6
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFilter("home");
-        echo "\">Home</a>
-                    <a href=\"#\">My account</a>
-                </div>
-            </div>
-            <div class=\"col-md-6\">
-                <div class=\"cart-info\">
-                    <i class=\"fa fa-shopping-cart\"></i>
-                    (<a href=\"#\">5 items</a>) in your cart (<a href=\"#\">\$45.80</a>)
+        echo "\" style=\"float: left;\">Home</a>
+                    ";
+        // line 7
+        if (($context["user"] ?? null)) {
+            // line 8
+            echo "                    <a href=\"";
+            echo $this->env->getExtension('Cms\Twig\Extension')->pageFilter("login");
+            echo "\" style=\"float: left;\">My account</a>
+                    ";
+        }
+        // line 10
+        echo "
+                    ";
+        // line 11
+        if (($context["user"] ?? null)) {
+            // line 12
+            echo "
+                    <a data-request=\"onLogout\" style=\"float: right;\" data-request-data=\"redirect: '/'\">Sign out</a>
+                    ";
+        } else {
+            // line 15
+            echo "                    <a href=\"";
+            echo $this->env->getExtension('Cms\Twig\Extension')->pageFilter("login");
+            echo "\" style=\"float: right;\">Login</a>
+                    ";
+        }
+        // line 17
+        echo "
+                    <a href=\"";
+        // line 18
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFilter("home_ar");
+        echo "\" style=\"float: right;\">(Arabische)</a>
                 </div>
             </div>
         </div>
@@ -51,7 +75,7 @@ class __TwigTemplate_2dfa0cfa6d7d9e353648ee006b2a09b4744bea50e52f1ed08fcbc81a486
 
     public function getDebugInfo()
     {
-        return array (  26 => 6,  19 => 1,);
+        return array (  57 => 18,  54 => 17,  48 => 15,  43 => 12,  41 => 11,  38 => 10,  32 => 8,  30 => 7,  26 => 6,  19 => 1,);
     }
 
     public function getSourceContext()
@@ -59,16 +83,21 @@ class __TwigTemplate_2dfa0cfa6d7d9e353648ee006b2a09b4744bea50e52f1ed08fcbc81a486
         return new Twig_Source("<div id=\"top-header\">
     <div class=\"container\">
         <div class=\"row\">
-            <div class=\"col-md-6\">
+            <div class=\"col-md-12\">
                 <div class=\"home-account\">
-                    <a href=\"{{ 'home'|page }}\">Home</a>
-                    <a href=\"#\">My account</a>
-                </div>
-            </div>
-            <div class=\"col-md-6\">
-                <div class=\"cart-info\">
-                    <i class=\"fa fa-shopping-cart\"></i>
-                    (<a href=\"#\">5 items</a>) in your cart (<a href=\"#\">\$45.80</a>)
+                    <a href=\"{{ 'home'|page }}\" style=\"float: left;\">Home</a>
+                    {% if user %}
+                    <a href=\"{{ 'login'|page }}\" style=\"float: left;\">My account</a>
+                    {% endif %}
+
+                    {% if user %}
+
+                    <a data-request=\"onLogout\" style=\"float: right;\" data-request-data=\"redirect: '/'\">Sign out</a>
+                    {% else %}
+                    <a href=\"{{ 'login'|page }}\" style=\"float: right;\">Login</a>
+                    {% endif %}
+
+                    <a href=\"{{ 'home_ar'|page }}\" style=\"float: right;\">(Arabische)</a>
                 </div>
             </div>
         </div>

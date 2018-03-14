@@ -1,0 +1,68 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    id:
+        label: rainlab.user::lang.user.id
+        invisible: true
+
+    username:
+        label: rainlab.user::lang.user.username
+        searchable: true
+        invisible: true
+
+    name:
+        label: rainlab.user::lang.user.name
+        searchable: true
+
+    surname:
+        label: rainlab.user::lang.user.surname
+        searchable: true
+        invisible: true
+
+    email:
+        label: rainlab.user::lang.user.email
+        searchable: true
+
+    created_at:
+        label: rainlab.user::lang.user.created_at
+        type: timetense
+
+    last_seen:
+        label: rainlab.user::lang.user.last_seen
+        type: timetense
+
+    is_guest:
+        label: rainlab.user::lang.user.is_guest
+        type: switch
+        invisible: true
+
+    street_name:
+        label: rainlab.user::lang.user.street_name
+        searchable: true
+        invisible: true
+
+    house_number:
+        label: rainlab.user::lang.user.house_number
+        searchable: true
+        invisible: true
+
+    postcode:
+        label: rainlab.user::lang.user.postcode
+        searchable: true
+        invisible: true
+
+    city:
+        label: rainlab.user::lang.user.city
+        searchable: true
+        invisible: true
+
+    addition:
+        label: rainlab.user::lang.user.addition
+        searchable: true
+        invisible: true
+
+
+
